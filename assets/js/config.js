@@ -13,7 +13,7 @@ var config = {
     // Default logging style
     // Log all except blacklisted sites
     // or log only the white listed sites.
-    loggingStyle: 'blacklist',
+    loggingStyle: 'whitelist',
     // Default logging type
     loggingType: 'domain',
     // By default logging is enabled
