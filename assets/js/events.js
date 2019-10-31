@@ -1,4 +1,4 @@
-/* global browser */
+/* global browser, chrome */
 
 // Core
 var WakaTimeCore = require("./core/WakaTimeCore").default;
@@ -24,6 +24,22 @@ browser.alarms.onAlarm.addListener(function (alarm) {
 
 // Create a new alarm for heartbeats.
 browser.alarms.create('heartbeatAlarm', {periodInMinutes: 2});
+
+/**
+ * Whenever the focus of a window is changed, record a heartbeat with the new
+ * active tab, unless focus has been lost.
+ */
+browser.windows.onFocusChanged.addListener(function (windowId) {
+  if (chrome) {
+    if (windowId !== chrome.windows.WINDOW_ID_NONE) {
+      browser.tabs.query({active: true, windowId: windowId}).then(function (tabs) {
+        console.log('recording a heartbeat - active window changed');
+
+        wakatime.recordHeartbeat();
+      });
+    }
+  }
+});
 
 /**
  * Whenever a active tab is changed it records a heartbeat with that tab url.
