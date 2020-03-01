@@ -1,5 +1,5 @@
-/* global browser */
 //jshint esnext:true
+var browser = require('./helpers/browser');
 
 var config = {
     // Extension name

@@ -1,8 +1,7 @@
-/* global browser */
-
 var React = require("react");
 var reactCreateClass = require('create-react-class');
 var $ = require('jquery');
+var browser = require('../helpers/browser');
 
 var config = require('../config');
 

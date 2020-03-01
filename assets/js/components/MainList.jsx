@@ -1,7 +1,6 @@
-/* global browser */
-
 var React = require('react');
 var reactCreateClass = require('create-react-class');
+var browser = require('../helpers/browser');
 
 var MainList = reactCreateClass({
 

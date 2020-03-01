@@ -3,6 +3,7 @@
 
 var $ = require('jquery');
 var moment = require('moment');
+var browser = require('./../helpers/browser');
 var config = require('./../config');
 
 // Helpers

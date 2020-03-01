@@ -1,8 +1,8 @@
-/* global browser */
-
 var React = require('react');
 var reactCreateClass = require('create-react-class');
 var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+
+var browser = require('../helpers/browser');
 
 var config = require('../config');
 
