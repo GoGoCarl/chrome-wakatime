@@ -44,7 +44,7 @@ var Options = reactCreateClass({
             whitelist: '',
             loggingType: config.loggingType,
             loggingStyle: config.loggingStyle
-        }).then(function (items) {
+        }, function (items) {
             that.setState({
                 theme: items.theme,
                 blacklist: items.blacklist,
@@ -82,7 +82,7 @@ var Options = reactCreateClass({
             whitelist: whitelist,
             loggingType: loggingType,
             loggingStyle: loggingStyle
-        }).then(function () {
+        }, function () {
             // Set state to be newly entered values.
             that.setState({
                 theme: theme,
